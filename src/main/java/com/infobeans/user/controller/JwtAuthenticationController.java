@@ -34,7 +34,7 @@ public class JwtAuthenticationController {
 	@Autowired
 	private UserDetailsService jwtInMemoryUserDetailsService;
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/auth/login", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody User authenticationRequest) throws Exception {
 
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPass());
@@ -61,7 +61,7 @@ public class JwtAuthenticationController {
 	}
 	
 	
-	@GetMapping("/hello")
+	@GetMapping("/auth/hello")
 	public String testString() {
 		
 		return "User authenticated success.";
