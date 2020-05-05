@@ -15,7 +15,7 @@ public class RouteFilter extends ZuulFilter {
 
   @Override
   public String filterType() {
-	  System.out.println("Pre filter get Called.....");
+	  System.out.println("Route  filter get Called.....");
     return "route";
   }
 
