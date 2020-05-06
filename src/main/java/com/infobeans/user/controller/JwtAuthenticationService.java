@@ -12,6 +12,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.infobeans.user.config.JwtTokenService;
 import com.infobeans.user.model.User;
@@ -55,5 +56,11 @@ public class JwtAuthenticationService {
 		} catch (BadCredentialsException e) {
 			throw new Exception("INVALID_CREDENTIALS", e);
 		}
+	}
+	
+	@GetMapping("/hello")
+	public String getMessage() {
+		
+	return "his is Testig String.";
 	}
 }

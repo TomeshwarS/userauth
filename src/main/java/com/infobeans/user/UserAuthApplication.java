@@ -27,7 +27,7 @@ public class UserAuthApplication {
 		logger.info("Application started successs.");
 	}
 
-	@Bean
+	// @Bean
 	public FilterRegistrationBean<CorsFilter> simpleCorsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
